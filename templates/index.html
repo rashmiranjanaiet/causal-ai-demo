@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Causal AI Demo</title>
+</head>
+<body>
+    <h2>Causal AI – Conversation Explainer</h2>
+
+    <form method="post" action="/analyze">
+        <textarea name="conversation" rows="8" cols="60"
+                  placeholder="Paste conversation here..."></textarea>
+        <br><br>
+        <button type="submit">Explain WHY</button>
+    </form>
+
+    {% if result %}
+    <h3>Explanation</h3>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
